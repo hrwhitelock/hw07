@@ -1,0 +1,16 @@
+--2015-09-29 17:53:18--  http://phys.uconn.edu/phys2200/downloads/gitignore.sample
+Resolving phys.uconn.edu (phys.uconn.edu)... 137.99.19.60
+Connecting to phys.uconn.edu (phys.uconn.edu)|137.99.19.60|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://www.phys.uconn.edu/phys2200/downloads/gitignore.sample [following]
+--2015-09-29 17:53:18--  http://www.phys.uconn.edu/phys2200/downloads/gitignore.sample
+Resolving www.phys.uconn.edu (www.phys.uconn.edu)... 137.99.19.60
+Reusing existing connection to phys.uconn.edu:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 545 [text/plain]
+Saving to: ‘gitignore.sample’
+
+     0K                                                       100% 54.6M=0s
+
+2015-09-29 17:53:18 (54.6 MB/s) - ‘gitignore.sample’ saved [545/545]
+

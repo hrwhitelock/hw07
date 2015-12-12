@@ -1,14 +1,3 @@
-#
-# Download and place this file into your git repository. 
-# Rename it to 'Makefile' (without quotes)
-#
-# wget http://www.phys.uconn.edu/phys2200/downloads/Makefile.sample
-# mv Makefile.sample Makefile
-#
-# or
-#
-# wget http://www.phys.uconn.edu/phys2200/downloads/Makefile.sample -O Makefile
-#
 
 EDITOR = /usr/bin/vim
 INDENT = /usr/bin/indent

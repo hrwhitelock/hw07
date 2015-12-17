@@ -37,21 +37,20 @@ double factorial(int n)
   else
     return(n * factorial(n-1));
 }
-double* integral_recur(int nmin, int nmax);
-double* integral_recur(int nmin, int nmax){
-	static double vals[NMAX+1];
+double integral_recur(int nmin, int nmax, double vals[]);
+double integral_recur(int nmin, int nmax, double vals[]){
 	vals[nmax]=.003678;
 	for (int n = nmax-1; n>=nmin; n--){
 		vals[n]=(vals[n+1]+1/E)/(n+1);
 	}
-	return vals; 
+	return 0; 
 }
 
 int main(){	
-	double *vals1, *vals2;
+	double vals1[NMAX+1], vals2[NMAX+1];
 	
-	vals2 = integralGen(1,100);
-	vals1 = integral_recur(1, 100);
+	integralGen(1,100, vals2);
+	integral_recur(1, 100, vals1);
 	printf("n	taylor	Recursion\n"); 
 	for(int j =1; j<NMAX+1; j++){
 		printf("%d	%f	%f	%f\n",j, taylorint(j,1.0),vals1[j], vals2[j]);
@@ -66,7 +65,7 @@ int main(){
         {
                 timer_start ();
                 for (int i = 0; i <count1; i++){
-                        vals1 = integral_recur(1, 100);
+                        integral_recur(1, 100, vals1);
                 }
                 timea = timer_stop ();
                 timea1 = timea / count1;
@@ -83,7 +82,7 @@ int main(){
         {
                 timer_start ();
                 for (int i = 0; i <count2; i++){
-                        vals2 = integralGen(1,100);
+                        integralGen(1,100, vals2);
                 }
                 timeb = timer_stop ();
                 timeb1 = timeb / count2;
@@ -101,7 +100,7 @@ int main(){
                 timer_start ();
                 for (int i = 0; i <count3; i++){
 			for(int j =0; j<101; j++){
- 			taylorInt(j, 1);
+ 			taylorint(j, 1);
 			}               
 		}
                 timec = timer_stop ();

@@ -6,6 +6,8 @@ CC        = clang
 LDFLAGS   = -O
 LDFLAGS   = -lm
 CFLAGS    = -Weverything -Wextra -pedantic $(LDFLAGS)
+#LDLIBS   = -lm -lgsl -lgslcblas
+LDLIBS    = $(shell gsl-config --libs)
 
 .SUFFIXES:
 .SUFFIXES:  .c .o .h

@@ -100,8 +100,10 @@ int main(){
         {
                 timer_start ();
                 for (int i = 0; i <count3; i++){
-                        vals2 = integralGen(1,100);
-                }
+			for(int j =0; j<101; j++){
+ 			taylorInt(j, 1);
+			}               
+		}
                 timec = timer_stop ();
                 timec1 = timec / count3;
                 printf (" %10.2f usec %10.6f sec %10d\n",
